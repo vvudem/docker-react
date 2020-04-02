@@ -15,5 +15,6 @@ RUN npm run build
 
 # Nginx Configuration for Run Phase for Production environment
 FROM nginx
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
 
